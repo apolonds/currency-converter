@@ -48,6 +48,11 @@ public class CurrenciesViewModel extends BaseViewModel {
     public void search(final String query) {
         // кажется, это последняя пакость наших троллей ¯\_(ツ)_/¯
         // давайте же наконец сделаем наше приложение полезным для любимых пользователей
+        if (query.isEmpty()){
+            showWholeData();
+        }else {
+            showFilteredData(query);
+        }
     }
 
     private void showWholeData() {
